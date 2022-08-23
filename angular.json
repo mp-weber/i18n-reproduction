@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "i18n-reproduction": {
+      "i18n": {
+	"sourcelocale": "en",
+	"locales": {
+	  "de": "messages.de.xlf"
+	}
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+	    "localize": ["de"],
             "outputPath": "dist/i18n-reproduction",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -23,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
